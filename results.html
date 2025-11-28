@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Your Result</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="dark-body">
+
+<div class="result-box">
+
+    <img id="result-img" class="result-img" src="images/placeholder.png" />
+
+    <h2 id="result-name"></h2>
+    <p id="result-desc"></p>
+
+    <a href="quiz-manwha-bf.html" class="retry-btn">Not sure? Try again</a>
+    <a href="index.html" class="home-btn">Back to Home</a>
+
+</div>
+
+<script>
+const params = new URLSearchParams(window.location.search);
+const id = params.get("id");
+
+fetch("data/results.json")
+  .then(res => res.json())
+  .then(data => {
+      const bf = data[id];
+      document.getElementById("result-name").textContent = bf.name;
+      document.getElementById("result-desc").textContent = bf.message;
+      document.getElementById("result-img").src = bf.image;
+  });
+</script>
+
+</body>
+</html>
