@@ -1,117 +1,70 @@
-body.dark-body {
-    background: #1b1b1f;
-    color: #e6e6e6;
-    font-family: 'Poppins', sans-serif;
+body {
     margin: 0;
+    font-family: Poppins, sans-serif;
+    background: #fff0f6;
+    color: #333;
 }
 
-.site-title {
-    text-align: center;
-    font-size: 2.8rem;
-    margin-top: 30px;
-}
-
-.subtitle {
-    text-align: center;
-    margin-top: -10px;
-    color: #bfbfbf;
-}
-
-.quiz-list {
-    padding: 20px;
-}
-
-.section-title {
-    font-size: 2rem;
+/* Home */
+.hero { text-align: center; padding: 40px 20px; }
+.hero-img {
+    width: 260px;
+    border-radius: 14px;
     margin-bottom: 20px;
-    text-align: center;
+    box-shadow: 0 0 15px rgba(0,0,0,0.2);
 }
-
-.quiz-grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 20px;
-    width: 90%;
-    margin: auto;
-}
-
-.quiz-card {
-    background: #26262c;
-    padding: 15px;
-    border-radius: 12px;
-    text-decoration: none;
+.start-btn {
+    background: #ff78c4;
     color: white;
-    display: block;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.quiz-card:hover {
-    background: #33333a;
-    transform: scale(1.03);
-}
-
-.quiz-card img {
-    width: 100%;
+    padding: 12px 24px;
     border-radius: 10px;
+    text-decoration: none;
 }
+.start-btn:hover { background: #ff5bb0; }
 
+/* Quiz */
 .quiz-container {
     width: 90%;
-    margin: auto;
-    margin-top: 30px;
-    padding-bottom: 40px;
-}
-
-.question {
-    background: #26262c;
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
     padding: 20px;
-    border-radius: 10px;
-    margin-bottom: 15px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
-
-.submit-btn {
+.quiz-btn {
     width: 100%;
-    background: #6f5cff;
-    color: white;
-    padding: 15px;
+    background: #ff78c4;
     border: none;
+    padding: 14px;
+    color: white;
+    font-size: 18px;
     border-radius: 8px;
-    font-size: 1.1rem;
-    cursor: pointer;
-    margin-top: 20px;
 }
+.quiz-btn:hover { background: #ff5bb0; }
 
-.submit-btn:hover {
-    background: #8b74ff;
-}
-
-.result-box {
-    text-align: center;
-    margin-top: 40px;
+/* Results */
+.result-container {
     width: 90%;
-    margin-left: auto;
-    margin-right: auto;
+    max-width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
 }
-
 .result-img {
     width: 250px;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 20px;
+    border-radius: 14px;
+    margin-bottom: 10px;
 }
-
-.retry-btn, .home-btn {
-    display: block;
-    width: 80%;
-    margin: 10px auto;
-    padding: 12px;
-    background: #6f5cff;
+.restart-btn {
+    display: inline-block;
+    margin-top: 20px;
+    background: #ff78c4;
+    padding: 12px 20px;
+    border-radius: 8px;
     color: white;
     text-decoration: none;
-    border-radius: 8px;
 }
-
-.retry-btn:hover, .home-btn:hover {
-    background: #8b74ff;
-}
+.restart-btn:hover { background: #ff5bb0; }
