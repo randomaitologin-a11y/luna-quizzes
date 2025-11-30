@@ -4,94 +4,25 @@
     <meta charset="UTF-8">
     <title>Luna Quizzes</title>
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-        /* Soft fade-in animation */
-        .fade-in {
-            animation: fadeIn 1.2s ease forwards;
-            opacity: 0;
-        }
-        @keyframes fadeIn {
-            from { opacity: 0; transform: translateY(10px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-
-        /* Quiz card */
-        .quiz-card {
-            width: 250px;
-            background: white;
-            padding: 20px;
-            border-radius: 16px;
-            text-decoration: none;
-            color: #333;
-            text-align: center;
-            box-shadow: 0 3px 20px rgba(0,0,0,0.12);
-            transition: 0.3s ease;
-        }
-
-        /* Hover glow */
-        .quiz-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 25px rgba(255,120,196,0.35);
-        }
-
-        /* Quiz card title */
-        .quiz-title {
-            margin-top: 10px;
-            font-size: 20px;
-            font-weight: 600;
-        }
-
-        /* Layout */
-        .quiz-buttons {
-            display: flex;
-            justify-content: center;
-            gap: 40px;
-            flex-wrap: wrap;
-            padding-bottom: 40px;
-        }
-
-        /* Soft pastel gradient background */
-        body {
-            background: linear-gradient(135deg, #ffe3f1, #ffd6f0, #fff0f6);
-            background-size: 400% 400%;
-            animation: bgMove 10s ease infinite;
-        }
-
-        @keyframes bgMove {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
-        }
-
-        /* Responsive for mobile */
-        @media (max-width: 600px) {
-            .quiz-card {
-                width: 85%;
-            }
-        }
-    </style>
 </head>
 
 <body>
 
-    <div class="hero fade-in">
+    <div class="hero">
         <h1>✨ Luna Quizzes ✨</h1>
         <p>Choose your quiz</p>
     </div>
 
-    <div class="quiz-buttons fade-in">
+    <div class="quiz-buttons">
 
         <!-- Manhwa Boyfriend Quiz -->
-        <a href="quiz-manhwa-bf.html" class="quiz-card">
-            <img src="images/manhwa/joo-jaekyung.png" class="hero-img">
-            <div class="quiz-title">Manhwa Boyfriend Quiz</div>
+        <a href="quiz-manhwa-bf.html" class="start-btn">
+            Find Out Who Is Your Manhwa Boyfriend
         </a>
 
         <!-- BL Boyfriend Quiz -->
-        <a href="quiz-bl.html" class="quiz-card">
-            <img src="images/bl/kinn.png" class="hero-img">
-            <div class="quiz-title">BL Boyfriend Quiz</div>
+        <a href="quiz-bl.html" class="start-btn">
+            Find Out Who Is Your BL Boyfriend
         </a>
 
     </div>
