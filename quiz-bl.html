@@ -1,25 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>BL Boyfriend Quiz</title>
-    <link rel="stylesheet" href="css/style.css">
+  <meta charset="utf-8" />
+  <title>Find Out Who Is Your BL Boyfriend</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <div class="quiz-container">
+    <h1>Find Out Who Is Your BL Boyfriend</h1>
+    <p style="text-align:center;color:#666;margin-top:-8px">Answer honestly — 5 questions at a time</p>
 
-    <h1>BL Boyfriend Quiz</h1>
+    <form id="quizForm"></form>
 
-    <div id="quiz-container">
-        <img id="character-image" src="" alt="BL Character" style="width:300px;border-radius:10px;"><br>
-
-        <h2 id="question"></h2>
-
-        <div id="options"></div>
-
-        <button id="next-btn" style="display:none;">Next</button>
+    <div style="display:flex;gap:12px;margin-top:18px;">
+      <button id="prevBtn" class="quiz-btn" style="flex:1; display:none;">Previous</button>
+      <button id="nextBtn" class="quiz-btn" style="flex:1;">Next</button>
     </div>
+  </div>
 
-    <script src="js/bl-quiz.js"></script>
-
+  <script src="js/bl-quiz.js"></script>
 </body>
 </html>

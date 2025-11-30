@@ -1,0 +1,27 @@
+{
+  "characters": [
+    { "name": "Kinn", "image": "kinn.png", "description": "A powerful mafia heir with a dangerous charm. Confident, dominant, and fiercely protective of the one he loves. Cold to the world, soft only for you." },
+    { "name": "Vegas", "image": "vegas.png", "description": "The wild, chaotic bad boy with a wounded heart. Mischievous, unpredictable, and intensely passionate." },
+    { "name": "Phayu", "image": "phayu.png", "description": "The mature, sexy biker boyfriend. Smooth talker, gentleman, the “I’ll pick you up in the rain” type." },
+    { "name": "Prapai", "image": "prapai.png", "description": "Playful, flirty CEO energy. Confident, teasing, and irresistibly charming." },
+    { "name": "Chi Cheng", "image": "chicheng.png", "description": "Soft but emotionally deep. Stoic at first but incredibly loyal." },
+    { "name": "Gu Chengyu", "image": "guchengyu.png", "description": "Mysterious, elegant, and calculating. Speaks little but observes everything." },
+    { "name": "Segasaki", "image": "segasaki.png", "description": "Domineering, blunt, and extremely protective. Pretends he doesn’t care, but cooks for you." },
+    { "name": "Mai", "image": "mai.png", "description": "Sweet sunshine boyfriend. Soft voice, gentle heart, warm hugs." },
+    { "name": "King", "image": "king.png", "description": "Elegant, mature, and emotionally steady. The calm, thoughtful type who remembers every detail." },
+    { "name": "Lian", "image": "lian.png", "description": "Possessive in a romantic way. Jealous easily but loves deeply." },
+    { "name": "Sun", "image": "sun.png", "description": "Quiet, observant, and intensely loyal — shows love through actions." },
+    { "name": "Tharn", "image": "tharn.png", "description": "Soft-spoken sweetheart with musician vibes. Romantic and cuddly." },
+    { "name": "Sarawat", "image": "sarawat.png", "description": "The cold, sarcastic boyfriend whose entire personality changes for you." },
+    { "name": "Jin", "image": "jin.png", "description": "Smart, stable, and patient. Quietly flirtatious with a secret smile." },
+    { "name": "Peem", "image": "peem.png", "description": "Cute, clingy, sunshine energy — full of affection." },
+    { "name": "Han Tuo", "image": "hantuo.png", "description": "Protective, stoic, and emotionally intense — acts like your bodyguard." },
+    { "name": "Kwon Jeong U", "image": "kwonjeongu.png", "description": "Charismatic, bold, and slightly chaotic — a fashionable troublemaker." }
+  ],
+  "cuteMessages": [
+    "He thinks about you every time he hears your favorite song.",
+    "He secretly saves the cutest photos you send him.",
+    "He will become the warmest person in your life.",
+    "He already has a spot for you in his future plans."
+  ]
+}

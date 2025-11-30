@@ -14,7 +14,9 @@
         <h2 id="resultName"></h2>
         <p id="resultDesc"></p>
 
-        <a href="quiz-manwha-bf.html" class="restart-btn">Try Again</a>
+        <a href="quiz-manhwa-bf.html" class="restart-btn">Try Again</a>
+        <a href="quiz-bl.html" class="restart-btn">Try BL Quiz</a>
+        <a href="index.html" class="restart-btn">Home</a>
     </div>
 
     <script>
@@ -24,8 +26,10 @@
                 const results = data.characters;
                 const random = results[Math.floor(Math.random() * results.length)];
 
-                document.getElementById("resultImg").src = "images/" + random.image;
-                document.getElementById("resultName").innerText = random.name + " Type";
+                // FIXED IMAGE PATH
+                document.getElementById("resultImg").src = "images/manhwa/" + random.image;
+
+                document.getElementById("resultName").innerText = random.name;
                 document.getElementById("resultDesc").innerText = random.description;
             });
     </script>
