@@ -1,59 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <title>Your BL Boyfriend Result</title>
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <title>Your BL Boyfriend Result</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-  <div class="result-container">
-    <h1>Your BL Boyfriend Match</h1>
-    <img id="resultImg" class="result-img" src="images/placeholder.png" alt="result image">
-    <h2 id="resultName"></h2>
-    <p id="resultDesc"></p>
-    <p id="cuteMsg" style="font-style:italic;color:#b33;margin-top:12px;"></p>
+    <div class="result-container">
+        <h1>Your BL Boyfriend Match</h1>
+        <img id="blResultImg" class="result-img">
+        <h2 id="blResultName"></h2>
+        <p id="blResultDesc"></p>
 
-    <div style="display:flex;gap:10px;justify-content:center;margin-top:18px;flex-wrap:wrap;">
-      <a id="tryAgain" href="quiz-bl.html" class="restart-btn">Not sure? Try again</a>
-      <a id="tryOther" href="quiz-manhwa-bf.html" class="restart-btn">Try Manhwa Quiz</a>
-      <a href="index.html" class="restart-btn">Home</a>
+        <a href="quiz-bl.html" class="restart-btn">Try Again</a>
+        <a href="index.html" class="restart-btn">Home</a>
     </div>
-  </div>
 
-  <script>
-    // get id param
-    const params = new URLSearchParams(location.search);
-    const id = Number(params.get('id')) || 0;
+    <script>
+        const urlParams = new URLSearchParams(window.location.search);
+        const id = urlParams.get("id");
 
-    fetch('data/bl-results.json')
-      .then(r => r.json())
-      .then(data => {
-        const chars = data.characters;
-        const messages = data.cuteMessages || [];
+        fetch("data/bl-results.json")
+            .then(res => res.json())
+            .then(data => {
+                const char = data.characters[id];
 
-        const idx = Math.max(0, Math.min(chars.length - 1, id));
-        const c = chars[idx];
-
-        const imgPath = 'images/bl/' + c.image;
-        const imgEl = document.getElementById('resultImg');
-
-        // if image exists the browser will show; otherwise placeholder.png will remain
-        imgEl.src = imgPath;
-
-        document.getElementById('resultName').innerText = c.name + " type";
-        document.getElementById('resultDesc').innerText = c.description;
-
-        // random cute message
-        if (messages.length) {
-          document.getElementById('cuteMsg').innerText = messages[Math.floor(Math.random() * messages.length)];
-        }
-      })
-      .catch(err => {
-        console.error(err);
-        document.getElementById('resultName').innerText = "Oops!";
-        document.getElementById('resultDesc').innerText = "Something went wrong loading the result.";
-      });
-  </script>
+                document.getElementById("blResultImg").src = char.image;
+                document.getElementById("blResultName").innerText = char.name;
+                document.getElementById("blResultDesc").innerText = char.description;
+            });
+    </script>
 </body>
 </html>
