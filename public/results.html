@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Your Manhwa BF Result</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <div class="result-container">
+        <h1>Your Manhwa BF Match</h1>
+
+        <img id="resultImg" class="result-img" alt="Manhwa BF">
+        <h2 id="resultName"></h2>
+        <p id="resultDesc"></p>
+
+        <a href="quiz-manhwa-bf.html" class="restart-btn">Try Again</a>
+        <a href="quiz-bl.html" class="restart-btn">Try BL Quiz</a>
+        <a href="index.html" class="restart-btn">Home</a>
+    </div>
+
+    <script>
+        fetch("./data/results.json")
+            .then(res => res.json())
+            .then(data => {
+                const results = data.characters;
+
+                const chosen = results[Math.floor(Math.random() * results.length)];
+
+                // Correct image path
+                document.getElementById("resultImg").src = "images/manhwa/" + chosen.image;
+
+                document.getElementById("resultName").innerText = chosen.name;
+                document.getElementById("resultDesc").innerText = chosen.description;
+            })
+            .catch(err => console.log("ERROR:", err));
+    </script>
+
+</body>
+</html>
