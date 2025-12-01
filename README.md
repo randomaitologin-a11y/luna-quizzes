@@ -10,3 +10,5 @@ Open `index.html` in any browser.
 2. Push this folder
 3. Connect the repo in Vercel
 4. Deploy
+5. fixed some hell of issues
+
