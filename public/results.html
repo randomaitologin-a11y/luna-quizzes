@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Your Manhwa BF Result</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="/css/style.css">
 </head>
 
 <body>
@@ -15,26 +15,25 @@
         <h2 id="resultName"></h2>
         <p id="resultDesc"></p>
 
-        <a href="quiz-manhwa-bf.html" class="restart-btn">Try Again</a>
-        <a href="quiz-bl.html" class="restart-btn">Try BL Quiz</a>
-        <a href="index.html" class="restart-btn">Home</a>
+        <a href="/quiz-manhwa-bf.html" class="restart-btn">Try Again</a>
+        <a href="/quiz-bl.html" class="restart-btn">Try BL Quiz</a>
+        <a href="/index.html" class="restart-btn">Home</a>
     </div>
 
     <script>
-        fetch("./data/results.json")
+        fetch("/data/results.json")
             .then(res => res.json())
             .then(data => {
                 const results = data.characters;
-
                 const chosen = results[Math.floor(Math.random() * results.length)];
 
-                // Correct image path
-                document.getElementById("resultImg").src = "images/manhwa/" + chosen.image;
+                // JSON already contains full image path
+                document.getElementById("resultImg").src = "/" + chosen.image;
 
                 document.getElementById("resultName").innerText = chosen.name;
                 document.getElementById("resultDesc").innerText = chosen.description;
             })
-            .catch(err => console.log("ERROR:", err));
+            .catch(err => console.error("RESULT PAGE ERROR:", err));
     </script>
 
 </body>
