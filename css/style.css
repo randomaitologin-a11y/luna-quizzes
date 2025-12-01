@@ -68,3 +68,10 @@ body {
     text-decoration: none;
 }
 .restart-btn:hover { background: #ff5bb0; }
+.quiz-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    margin-top: 20px;
+}
