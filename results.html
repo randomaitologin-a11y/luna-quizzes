@@ -7,10 +7,11 @@
 </head>
 
 <body>
+
     <div class="result-container">
         <h1>Your Manhwa BF Match</h1>
 
-        <img id="resultImg" class="result-img">
+        <img id="resultImg" class="result-img" alt="Manhwa BF">
         <h2 id="resultName"></h2>
         <p id="resultDesc"></p>
 
@@ -20,18 +21,21 @@
     </div>
 
     <script>
-        fetch("data/results.json")
+        fetch("./data/results.json")
             .then(res => res.json())
             .then(data => {
                 const results = data.characters;
-                const random = results[Math.floor(Math.random() * results.length)];
 
-                // FIXED IMAGE PATH
-                document.getElementById("resultImg").src = "images/manhwa/" + random.image;
+                const chosen = results[Math.floor(Math.random() * results.length)];
 
-                document.getElementById("resultName").innerText = random.name;
-                document.getElementById("resultDesc").innerText = random.description;
-            });
+                // Correct image path
+                document.getElementById("resultImg").src = "images/manhwa/" + chosen.image;
+
+                document.getElementById("resultName").innerText = chosen.name;
+                document.getElementById("resultDesc").innerText = chosen.description;
+            })
+            .catch(err => console.log("ERROR:", err));
     </script>
+
 </body>
 </html>
