@@ -1,19 +1,16 @@
 <script>
-    fetch("/data/results.json")
-        .then(res => {
-            if (!res.ok) throw new Error("JSON not found");
-            return res.json();
-        })
-        .then(data => {
-            const results = data.characters;
-            const chosen = results[Math.floor(Math.random() * results.length)];
+fetch("/data/results.json")
+    .then(res => res.json())
+    .then(data => {
+        const results = data.characters;
+        const chosen = results[Math.floor(Math.random() * results.length)];
 
-            document.getElementById("resultImg").src = chosen.image;
-            document.getElementById("resultName").innerText = chosen.name;
-            document.getElementById("resultDesc").innerText = chosen.description;
-        })
-        .catch(err => {
-            console.error("RESULT ERROR:", err);
-            document.body.innerHTML += "<p style='color:red;text-align:center'>Failed to load results.</p>";
-        });
+        document.getElementById("resultImg").src = chosen.image;
+        document.getElementById("resultName").innerText = chosen.name;
+        document.getElementById("resultDesc").innerText = chosen.description;
+    })
+    .catch(err => {
+        console.error("RESULT ERROR:", err);
+        document.body.innerHTML += "<p style='color:red;'>Failed to load results.json</p>";
+    });
 </script>
